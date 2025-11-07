@@ -33,7 +33,7 @@
         return $esPrimo;
     }
 
-    function mcd($n1,$n2){ // Máximo común divisor de forma recursiva
+    function mcd($n1,$n2){ // 3 Máximo común divisor de forma recursiva
         if ($n1 = $n2){
             return $n1;
         } elseif ($n1 > $n2){
@@ -43,14 +43,22 @@
         }
     }
 
-    function factorial($n){// Factorial de forma recursiva
+    function factorial($n){// 2 Factorial de forma recursiva
         if ($n == 1){
             return $n;
         } else{
             return factorial($n-1);
         }
     }
+    function palabraMasLarga($texto){
+        $fragmentos = preg_split('/[\s]/',$texto);
+        $cadenaMax = 0;
+        
+    }
 
+
+
+    // 10
     function palabrasInversas($texto){
         $segmentos = preg_split('/\s+/', $texto);
         $textoInvertido = "";
@@ -63,6 +71,17 @@
 
     }
     palabrasInversas("Hola que tal");
+
+    // 14
+    $circunferencia = function($num) {return 2 * pi() * $num;};
+    $circulo = function ($num) {return pi() * pow($num,2);};
+    $esfera = function ($num) {return 4/3 * pi() * pow($num,3);};
+
+    // 15
+    $circunferencia2 = fn($num) => 2 * pi() *$num;
+    $circulo2 = fn($num) => pi() * pow($num,2);
+    $esfera2 = fn($num) => 4/3 * pi() * pow($num,3);
+
     ?>
     
 </body>
