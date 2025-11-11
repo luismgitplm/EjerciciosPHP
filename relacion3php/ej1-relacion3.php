@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,14 @@
 
     <title>Document</title>
 </head>
+
 <body>
     <!--
-    <form action="<?php echo $_SERVER['PHP_SELF']?>" class = "m-auto p-3 w-50" method = "get" id = "form1">
+    <form action="<?php
+
+                    use function PHPSTORM_META\map;
+
+                    echo $_SERVER['PHP_SELF'] ?>" class = "m-auto p-3 w-50" method = "get" id = "form1">
         <label for = "num" class = "form-label">Indique un número para saber si es primo</label>
         <input type = "number"  class = "form-control" name = "num" id = "num">
 
@@ -18,71 +24,114 @@
 
     <?php
 
-    function esPrimo(){
+    function esPrimo()
+    {
         $esPrimo = true;
         $contador = 2;
         $num = $_GET['num'];
 
-        do{
-            if ($num % $contador == 0){
+        do {
+            if ($num % $contador == 0) {
                 $esPrimo = false;
             }
-            $contador ++;
-        }while($esPrimo == false || $contador < $num);
+            $contador++;
+        } while ($esPrimo == false || $contador < $num);
 
         return $esPrimo;
     }
 
-    function mcd($n1,$n2){ // 3 Máximo común divisor de forma recursiva
-        if ($n1 = $n2){
+    // 3 Máximo común divisor de forma recursiva
+    function mcd($n1, $n2)
+    {
+        if ($n1 = $n2) {
             return $n1;
-        } elseif ($n1 > $n2){
-            return mcd($n1 - $n2,$n2);
+        } elseif ($n1 > $n2) {
+            return mcd($n1 - $n2, $n2);
         } else {
-            return mcd($n2 - $n1,$n1);
+            return mcd($n2 - $n1, $n1);
         }
+    }
+    echo mcd(48, 18);
+
+    // 2 Factorial de forma recursiva
+    function factorial($n)
+    {
+        if ($n == 0 || $n == 1) {
+            return 1;
+        }
+        return $n * factorial($n - 1);
     }
 
-    function factorial($n){// 2 Factorial de forma recursiva
-        if ($n == 1){
-            return $n;
-        } else{
-            return factorial($n-1);
+
+    // 9
+    function palabraMasLarga($texto)
+    {
+        $arrayTexto = preg_split('/[\s+]/', $texto);
+        $longitudMax = 0;
+        $palabraMax = '';
+
+
+        for ($i = 0; $i < count($arrayTexto); $i++) {
+            if (strlen($arrayTexto[$i]) > $longitudMax) {
+                $longitudMax = strlen($arrayTexto[$i]);
+                $palabraMax = $arrayTexto[$i];
+            }
         }
-    }
-    function palabraMasLarga($texto){
-        $fragmentos = preg_split('/[\s]/',$texto);
-        $cadenaMax = 0;
-        
+
+        return $palabraMax;
     }
 
 
 
     // 10
-    function palabrasInversas($texto){
+    function palabrasInversas($texto)
+    {
         $segmentos = preg_split('/\s+/', $texto);
         $textoInvertido = "";
 
-        for ($i = count($segmentos); $i--; $i >= 0){
-            $textoInvertido = $textoInvertido.$segmentos[$i]." ";
+        for ($i = count($segmentos); $i--; $i >= 0) {
+            $textoInvertido = $textoInvertido . $segmentos[$i] . " ";
         }
 
-        echo $textoInvertido;
-
+        return $textoInvertido;
     }
-    palabrasInversas("Hola que tal");
+
+
+    //11 
+    function swap(&$a, &$b)
+    {
+        $varInterm = $a;
+        $a = $b;
+        $b = $varInterm;
+    }
+
+    function invertir(&$array)
+    {
+        $j = count($array) - 1;
+        for ($i = 0; $i < $j; $i++) {
+            swap($array[$i], $array[$j]);
+            $j--;
+        }
+    }
 
     // 14
-    $circunferencia = function($num) {return 2 * pi() * $num;};
-    $circulo = function ($num) {return pi() * pow($num,2);};
-    $esfera = function ($num) {return 4/3 * pi() * pow($num,3);};
+    $circunferencia = function ($num) {
+        return 2 * pi() * $num;
+    };
+    $circulo = function ($num) {
+        return pi() * pow($num, 2);
+    };
+    $esfera = function ($num) {
+        return 4 / 3 * pi() * pow($num, 3);
+    };
 
     // 15
-    $circunferencia2 = fn($num) => 2 * pi() *$num;
-    $circulo2 = fn($num) => pi() * pow($num,2);
-    $esfera2 = fn($num) => 4/3 * pi() * pow($num,3);
+    $circunferencia2 = fn($num) => 2 * pi() * $num;
+    $circulo2 = fn($num) => pi() * pow($num, 2);
+    $esfera2 = fn($num) => 4 / 3 * pi() * pow($num, 3);
 
     ?>
-    
+
 </body>
+
 </html>

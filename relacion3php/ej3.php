@@ -14,17 +14,31 @@
 </head>
 
 <body>
-    <!--7- Monta en un documento PHP un formulario para introducir 2 números
-    formateado con el framework Bootstrap 5-->
-    <div class="d-flex justify-content-center align-items-center" id="wrapper">
+    <div class="d-flex flex-column justify-content-center align-items-center" id="wrapper">
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="get">
-            <h2>Plantilla de formulario numérico</h2>
+            <h2>Máximo común divisor</h2>
             <label for="num1" class="form-label">Indique el primer número</label>
             <input type="number" class="form-control" name="num1" id="num1">
 
             <label for="num2" class="form-label">Indique el segundo número</label>
             <input type="number" class="form-control" name="num2" id="num2">
+
+            <button type="submit">Calcular</button>
         </form>
+
+
+        <?php
+        require_once "ej4/funcionesRel3.php";
+
+        if (!empty($_GET)) {
+            $num1 = $_GET['num1'];
+            $num2 = $_GET['num2'];
+            $mcd = mcd($num1, $num2);
+
+            echo "El máximo común divisor de ambos números es: $mcd";
+        }
+        ?>
+
     </div>
 </body>
 
