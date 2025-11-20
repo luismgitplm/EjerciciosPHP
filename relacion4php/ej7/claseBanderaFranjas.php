@@ -1,7 +1,7 @@
 <?php
 class BanderaFranjas {
     public function __construct(
-        public string $orientecion,
+        public string $orientacion,
         public array $franjas,
         public string $procedencia = "sin adscripción"
     ){}
@@ -16,14 +16,14 @@ class BanderaFranjas {
     /* Método que compare dos banderas y diga si tiene las mismas franjas en diferente
     orientación*/
     public function compararFranjas($bandera){
-        return $this->franjas == $bandera->franjas && $this->orientecion == $bandera->orientacion;
+        return $this->franjas == $bandera->franjas && $this->orientacion == $bandera->orientacion;
     }
 
     public function invertirOrientacion(){
-        if ($this->orientecion == "horizontal"){
-            $this->orientecion = "vertical";
+        if ($this->orientacion == "horizontal"){
+            $this->orientacion = "vertical";
         } else {
-            $this->orientecion = "horizontal";
+            $this->orientacion = "horizontal";
         }
     }
     
