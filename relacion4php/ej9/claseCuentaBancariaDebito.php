@@ -8,7 +8,6 @@ class CuentaBancariaDebito extends CuentaBancariaAbstracta{
         } else {
             echo "Saldo insuficiente para realizar esa extracción.";
         }
-        
     }
 }
 

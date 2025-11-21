@@ -13,6 +13,7 @@ abstract class CuentaBancariaAbstracta{
         $this->numOperaciones++;
     }
 
+    // Método abstracto que ha de ser implementado por toda clase que herede de esta
     abstract function extraer($cantidad);
 
     function transferir($cantidad, $cuenta){
@@ -22,9 +23,9 @@ abstract class CuentaBancariaAbstracta{
     }
 
     function __toString(){
-        return "Número de cuenta: {$this->numCuenta}\n". 
-                "Nombre del titular: {$this->nombreTitular}\n".
-                "Saldo: {$this->saldo}\n".
+        return "Número de cuenta: {$this->numCuenta}<br>". 
+                "Nombre del titular: {$this->nombreTitular}<br>".
+                "Saldo: {$this->saldo}<br>".
                 "Número de operaciones: {$this->numOperaciones}";
     }
 }

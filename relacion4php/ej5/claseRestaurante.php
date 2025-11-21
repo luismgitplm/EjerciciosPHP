@@ -16,7 +16,9 @@ class Restaurante{
 
     // toString
     public function __toString(){
-            
+        return "Nombre: {$this->nombre}<br>".
+                "Tipo de Cocina: {$this->tipoCocina}<br>".
+                "Ratings: ". join(", ",$this->ratings);
     }
 
     // Muestra los elementos del array de ratings
