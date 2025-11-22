@@ -10,23 +10,22 @@
         #wrapper {
             height: 60vh;
         }
+
+        .form-text {
+            visibility: hidden;
+        }
     </style>
 </head>
 
 <body>
-    <!--7- Monta en un documento PHP un formulario para introducir 2 números
-    formateado con el framework Bootstrap 5-->
     <div class="d-flex justify-content-center align-items-center" id="wrapper">
-        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="get">
-            <h2>Plantilla de formulario numérico</h2>
-            <label for="num1" class="form-label">Indique el primer número</label>
-            <input type="number" class="form-control" name="num1" id="num1">
-
-            <label for="num2" class="form-label">Indique el segundo número</label>
-            <input type="number" class="form-control" name="num2" id="num2">
+        <form action="calculo.php" method="get" id="form">
+            <h2>Indique la nota</h2>
+            <input type="text" class="form-control" name="nota" id="nota">
+            <div id="notaHelp" class="form-text text-danger">La nota debe ser un número entero de 0 a 10</div>
             <input type="submit" value="Enviar">
         </form>
     </div>
 </body>
-
+<script src="validacion.js"></script>
 </html>
