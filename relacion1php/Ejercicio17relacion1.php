@@ -13,15 +13,6 @@
         $num2 = 6;
         $cociente = 0;
 
-       /* if ($num1 < $num2){
-            echo "El resto es: $num1";
-        } else {
-            do{
-                $num1 -= $num2;
-                $cociente++;
-            }while($num1 >= $num2);
-        }*/
-
         while($num1 >= $num2){
             $num1 -= $num2;
             $cociente++;
