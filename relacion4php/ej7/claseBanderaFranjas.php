@@ -51,11 +51,56 @@ class BanderaFranjas
     
 }
 
+// Creación de obnetos de la clase BanderaFranjas
 $bandera = new BanderaFranjas("horizontal",["amarillo","rojo","azul","verde"]);
 $bandera2 = new BanderaFranjas("vertical",["amarillo","rojo","azul","verde"]);
+
+// Uso del método toString para mostrar sus datos
+echo '<strong>Datos de la primera bandera:</strong><br>'. $bandera->__toString();
+echo '<br><strong>Datos de la segunda bandera:</strong><br>'. $bandera2->__toString();
+
+echo '<br><strong>Comparaciones</strong>';
+
+// Uso del método que compara banderas según la orientación de sus colores
 if ($bandera->compararFranjas($bandera2)){
-    echo 'Tienen los mismos colores con diferente orientación';
+    echo '<br>Tienen los mismos colores con diferente orientación';
 } else {
-    echo 'No tienen los mismos colores con diferente orientación ';
+    echo '<br>No tienen los mismos colores con diferente orientación ';
 }
+
+// Uso del método que indica si ambas banderas son idénticas
+echo '<br>'. ($bandera->comparar($bandera2) ? 'Ambas banderas son idénticas' : 'No son idénticas');
+
+// Uso del método que invierte la orientación de las franjas
+$bandera2->invertirOrientacion();
+
+// Comparaciones anteriores tras este cambio
+echo '<br><br><strong>Mismas comparaciones anteriores realizadas tras invertir la orientación de las franjas de la segunda bandera:</strong><br>';
+
+echo '<br>Datos de la segunda bandera:<br>'. $bandera2->__toString();
+
+if ($bandera->compararFranjas($bandera2)){
+    echo '<br>Tienen los mismos colores con diferente orientación';
+} else {
+    echo '<br>No tienen los mismos colores con diferente orientación ';
+}
+
+echo '<br>'. ($bandera->comparar($bandera2) ? 'Ambas banderas son idénticas' : 'No son idénticas');
+
+// Uso del método que invierte los colores
+$bandera2->invertirColores();
+
+// Comparaciones anteriores tras este cambio
+echo '<br><br><strong>Mismas comparaciones anteriores realizadas tras invertir el orden de colores de la segunda bandera:</strong><br>';
+
+echo '<br>Datos de la segunda bandera:<br>'. $bandera2->__toString();
+
+if ($bandera->compararFranjas($bandera2)){
+    echo '<br>Tienen los mismos colores con diferente orientación';
+} else {
+    echo '<br>No tienen los mismos colores con diferente orientación ';
+}
+
+echo '<br>'. ($bandera->comparar($bandera2) ? 'Ambas banderas son idénticas' : 'No son idénticas');
+
 
