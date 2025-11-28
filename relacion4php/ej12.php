@@ -16,11 +16,20 @@
         // Array a partir de la clase estandar
         $miModuloArray = (array) $miModulo;
 
-        // Objeto a partid del array
+        echo '<strong>Datos del array obtenido a partir de un objeto stdClass:</strong><br>';
+        echo var_dump($miModuloArray);
+
+        // Objeto a partir del array
         $miModuloOtraVezObjeto = (object) $miModuloArray;
+
+        echo '<strong><br>Datos del objeto obtenido a partir del array anterior:</strong><br>';
+        echo var_dump($miModuloOtraVezObjeto);
 
         // serializar miModuloArray
         $miModuloArraySerializado = serialize($miModuloArray);
+
+        echo '<strong><br>Datos del array anterior serializado:</strong><br>';
+        echo var_dump($miModuloArraySerializado);
     ?>
 </body>
 </html>
