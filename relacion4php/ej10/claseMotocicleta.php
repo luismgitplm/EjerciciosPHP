@@ -36,4 +36,36 @@ class Motocicleta implements Encendible{
     public function cargarGasolina($litros){
         $this->gasolina += $litros;
     }
+
+    public function __toString(){
+        return "Gasolina: {$this->gasolina}<br>".
+                "Batería: {$this->bateria}<br>".
+                "Matrícula: {$this->matricula}<br>".
+                "Estado del motor: {$this->estado}<br>";
+    }
 }
+
+$moto = new Motocicleta('123');
+
+echo '<strong>Estado de la motocicleta tras su creación</strong><br>';
+echo $moto->__toString();
+
+echo '<br><strong>Intento de encender el motor sin combustible</strong><br>';
+$moto->encender();
+
+echo '<br><strong>Datos tras cargar 30 litros de gasolina</strong><br>';
+$moto->cargarGasolina(30);
+echo $moto->__toString();
+
+echo '<br><strong>Segundo intento de encender el motor</strong><br>';
+$moto->encender();
+
+echo '<br><strong>Datos de la motocicleta tras esto</strong><br>';
+echo $moto->__toString();
+
+echo '<br><strong>Datos de la motocicleta tras apagar el motor</strong><br>';
+$moto->apagar();
+echo $moto->__toString();
+
+echo '<br><strong>Intento de apagar el motor cuando ya está apagado</strong><br>';
+$moto->apagar();

@@ -20,5 +20,27 @@ class Bombilla implements Encendible {
     public function apagar(){
         $this->encendida = false;
     }
+
+    public function __toString(){
+        $mensaje = $this->encendida ? "Está encendida" : "Está apagada";
+
+        return "Tipo de bombilla: {$this->tipoBombilla}<br>".
+                "Lúmenes: {$this->lumenes}<br>".
+                $mensaje;
+                
+    }
        
 }
+
+$bombillaPrueba = new Bombilla('LED',1200);
+
+echo '<strong>Datos de la bombilla tras su creación:</strong><br>';
+echo $bombillaPrueba->__toString();
+
+echo '<br><strong>Datos de la bombilla tras ejecutar el método que la enciende</strong><br>';
+$bombillaPrueba->encender();
+echo $bombillaPrueba->__toString();
+
+echo '<br><strong>Datos de la bombilla tras ejecutar el método que la apaga</strong><br>';
+$bombillaPrueba->apagar();
+echo $bombillaPrueba->__toString();

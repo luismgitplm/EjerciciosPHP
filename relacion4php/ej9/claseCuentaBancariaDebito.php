@@ -12,7 +12,13 @@ class CuentaBancariaDebito extends CuentaBancariaAbstracta{
 }
 
 $cuentaDebito = new CuentaBancariaDebito(12,"...");
-echo $cuentaDebito->__toString();
+
+echo '<strong>Datos de la cuenta creada:</strong><br>';
+echo $cuentaDebito->__toString(). '<br>';
+
+echo '<strong>Intento de extraer dinero sin tener saldo:</strong><br>';
 $cuentaDebito->extraer(20);
+
+echo '<br><strong>Datos tras depositar 30 euros:</strong><br>';
 $cuentaDebito->depositar(30);
 echo $cuentaDebito->__toString();
