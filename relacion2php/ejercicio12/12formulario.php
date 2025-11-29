@@ -24,6 +24,7 @@
         <div class = "mb-3">
             <label for = "faltas" class = "form-label">Indica el número de faltas</label>
             <input type = "text"  class = "form-control" name = "faltas" id = "faltas">
+            <div id = "faltasHelp" class = "form-text text-danger">El número de faltas debe ser un número entero positivo o cero</div>
         </div>
          <div class = "mb-3">
             <label for = "email" class = "form-label">Indica un email</label>
@@ -31,7 +32,8 @@
         </div>
          <div class = "mb-3">
             <label for = "nombre" class = "form-label">Indica tu nombre</label>
-            <input type = "text"  required class = "form-control" name = "nombre" id = "nombre">
+            <input type = "text"  class = "form-control" name = "nombre" id = "nombre">
+            <div id = "nombreHelp" class = "form-text text-danger">El nombre no puede quedar vacío</div>
         </div>
             <input type="submit" value="Enviar">
     </form>

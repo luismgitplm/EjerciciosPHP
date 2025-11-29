@@ -30,12 +30,14 @@ document.getElementById('form1').addEventListener("submit",function(event){
         }
 
         if((!Number.isInteger(faltas) || faltas < 0)){
-            alert("El número de faltas debe ser un número entero positivo o cero");
+            document.getElementById('faltasHelp').style.visibility = "visible";
+            document.getElementById('faltas').style.borderColor="red";
             correcto = false;
         }
 
         if(nombre.trim()==""){
-            alert("El nombre es obligatorio");
+            document.getElementById('nombreHelp').style.visibility = "visible";
+            document.getElementById('nombre').style.borderColor="red";
             correcto = false;
         }
 
@@ -51,12 +53,14 @@ document.getElementById('nota2').addEventListener("change",function(){
     limpiarError('nota2');
 });
 
+document.getElementById('faltas').addEventListener("change",function(){
+    limpiarError('faltas');
+});
 
- /*
-    function marcarError(identificador){
-        document.getElementById(identificador + 'Help').style.visibility = "visible";
-        document.getElementById(identificador).style.borderColor="red";
-    }*/
+document.getElementById('nombre').addEventListener("change",function(){
+    limpiarError('nombre');
+});
+
 
  function limpiarError(identificador){
         document.getElementById(identificador + 'Help').style.visibility = "hidden";
