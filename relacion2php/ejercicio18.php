@@ -8,6 +8,9 @@
     <title>Document</title>
  </head>
  <body>
+    <!--18- Repetiremos el ejercicio 19 de la relación anterior, pero con formulario
+    formateado en Bootstrap-->
+
     <div class="d-flex justify-content-center align-items-center" id="wrapper">
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="get" id="form">
             <h2>Pasar a binario</h2>
@@ -45,7 +48,7 @@
  <?php
     if (isset($_GET['num'])){
         $numero = $_GET['num'];
-       $resultado = "";
+        $resultado = "";
 
        echo "el resultado es : ";
        while ($numero >= 2) {

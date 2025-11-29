@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
+    <!--10- Haz un script que pida un texto como entrada y lo muestre con las
+    palabras en orden inverso. Todo en un mismo archivo php-->
     <div class="d-flex flex-column justify-content-center align-items-center" id="wrapper">
         <form method="get" id="form" class="mb-3">
             <h2>Orden inverso</h2>

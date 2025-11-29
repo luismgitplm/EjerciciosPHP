@@ -10,6 +10,11 @@
 </head>
 <body>
 <div class="container mt-5">
+    <!--15- Retomamos el ejercicio 13 de la relación anterior, formateamos la entrada
+    con Bootstrap, la validamos con JavaScript, pero utilizaremos un mismo
+    documento para el formulario, el cálculo y la visualización de resultados
+    (juntaremos, por tanto, funcionalidades propias del front y del back). ¿Te
+    parece recomendable hacerlo así?-->
     <h1>Factorial de un número</h1>
     <form class="mb-3" method="get" id="form" action="<?php echo $_SERVER['PHP_SELF'] ?>">
         <div class="mb-3">

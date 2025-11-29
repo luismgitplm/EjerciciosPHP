@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
+    <!--9- Haz un programa PHP que pida un texto por formulario y a continuación
+    extraiga y muestre la palabra más larga. Todo en el mismo archivo-->
     <div class="d-flex flex-column justify-content-center align-items-center" id="wrapper">
         <form method="get" id="form" class="mb-3">
             <h2>Palabra más larga</h2>

@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <!--Empleo de funciones anónimas para calcular perímetro, area y volumen de circunferencia, círculo y esfera-->
     <div class="d-flex flex-column justify-content-center align-items-center" id="wrapper">
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="get" class="mb-3">
             <h2>Circunferencia, Círculo y Esfera</h2>

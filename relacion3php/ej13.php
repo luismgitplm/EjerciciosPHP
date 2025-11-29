@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <!--Manejo de funciones que trabajan con cadenas de texto-->
     <div class="d-flex flex-column justify-content-center align-items-center" id="wrapper">
         <form method="get" id="form" class="mb-3">
             <h2>Procesamiento de cadenas de texto</h2>

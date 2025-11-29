@@ -9,7 +9,7 @@
 <body>
     <p id = "resultado" class = "text-center">
     <?php
-        // Haremos que se ejecuten los cálculos 
+        // Recepción de datos mediante get y realización de operaciones 
             $numero1 = $_GET['numero1'];
             $numero2 = $_GET['numero2'];
             $operador = $_GET['operador'];

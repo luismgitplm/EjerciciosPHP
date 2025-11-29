@@ -9,10 +9,12 @@
 </head>
 <body>
     <?php
+    // Recepción de datos mediante get
     $nota1 = $_GET['nota1'];
     $nota2 = $_GET['nota2'];
     $faltas = $_GET['faltas'];
-    $notaFinal = ($nota1 + $nota2) / 2 - 0.25*$faltas;
+    // Cálculo de la nota final
+    $notaFinal = ($nota1 + $nota2) / 2 - 0.25*$faltas; 
 
     if ($notaFinal >= 5){
         echo"<p>Enhorabuena, has aprobado con un $notaFinal</p>";

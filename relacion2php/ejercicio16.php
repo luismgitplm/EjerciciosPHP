@@ -8,6 +8,12 @@
     <title>Document</title>
 </head>
 <body>
+    <!--16- Lo mismo con el 15 y 16 de la relación anterior unificándolos en un único
+    programa, pero separando la captación de datos del proceso. En el formulario
+    de entrada se nos pedirá qué queremos, si dictaminar únicamente si el número
+    de entrada es primo o no ó por el contrario, mostrar los divisores (solo
+    podremos elegir una de las dos opciones)-->
+
     <div class="d-flex justify-content-center align-items-center" id="wrapper">
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="get" id="form">
             <h2>Es primo o divisores</h2>
